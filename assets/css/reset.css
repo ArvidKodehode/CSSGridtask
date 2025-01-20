@@ -1,0 +1,143 @@
+/* Moderne CSS-reset inspirert av https://piccalil.li/blog/a-modern-css-reset */
+
+/* Regler for boksstørrelse */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Inkluderer padding og border i elementets totale bredde/høyde */
+}
+
+/* Fjern standard marger */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0; /* Fjerner innebygde marger for disse elementene */
+}
+
+/* Fjern liste-stiler for ul og ol med rollene "list" */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none; /* Ingen punktmarkeringer eller tall */
+}
+
+/* Standardinnstillinger for root */
+html:focus-within {
+  scroll-behavior: smooth; /* Myk rulling ved navigering */
+}
+
+/* Standardinnstillinger for body */
+body {
+  min-height: 100vh; /* Sikrer at body dekker hele skjermen */
+  text-rendering: optimizeSpeed; /* Forbedrer tekstgjengivelse */
+  line-height: 1.5; /* For bedre lesbarhet */
+}
+
+/* Standard stiler for lenker uten klasser */
+a:not([class]) {
+  text-decoration-skip-ink: auto; /* Hopp over understrek på mellomrom */
+}
+
+/* Gjør bilder lettere å arbeide med */
+img,
+picture {
+  max-width: 100%; /* Bilder tilpasser seg forelderens bredde */
+  display: block; /* Hindrer inline-boksproblemer */
+}
+
+/* Arv skrifttyper for inputs og knapper */
+input,
+button,
+textarea,
+select {
+  font: inherit; /* Arver skrifttype fra overordnede elementer */
+}
+
+/* Fjern animasjoner og overganger for brukere som foretrekker redusert bevegelse */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto; /* Ingen myk rulling */
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important; /* Minimerer animasjoner */
+    animation-iteration-count: 1 !important; /* Ingen repetisjon av animasjoner */
+    transition-duration: 0.01ms !important; /* Fjerner overganger */
+    scroll-behavior: auto !important; /* Ingen myk rulling */
+  }
+}
+
+/* Gjenta reglene for kompatibilitet */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Garanterer konsekvent boksmodell */
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0; /* Fjerner dobbel definisjon av standard marg */
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none; /* Garanterer at lister alltid er uten standard stiler */
+}
+
+html:focus-within {
+  scroll-behavior: smooth; /* Dobbel definisjon for backup */
+}
+
+body {
+  min-height: 100vh; /* Dekker minimum skjermhøyde */
+  text-rendering: optimizeSpeed; /* Optimal tekstkvalitet */
+  line-height: 1.5; /* Dobbel spesifikasjon for stilkonsistens */
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto; /* Presis lenkestil */
+}
+
+img,
+picture {
+  max-width: 100%; /* Bilder respekterer foreldres rammer */
+  display: block; /* Hindrer overlapping */
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit; /* Skjemaelementer respekterer foreldres fonter */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto; /* Normal rulling ved redusert animasjon */
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important; /* Minimal animasjon for universell kompatibilitet */
+    animation-iteration-count: 1 !important; /* Ingen unødvendig gjentakelse */
+    transition-duration: 0.01ms !important; /* Fjerner alle effekter ved bevegelsespreferanser */
+    scroll-behavior: auto !important; /* Normal rullehastighet */
+  }
+}

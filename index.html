@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Sørger for at siden vises riktig på brukerens enhet -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Nyhetsbrev | Registreringsskjema med suksessmelding</title>
+
+    <!-- CSS-stiler -->
+    <link rel="stylesheet" href="assets/css/reset.css" /> <!-- Tilbakestiller standard CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" /> <!-- Hovedstiler for siden -->
+    <link rel="stylesheet" href="assets/css/queries.css" /> <!-- Stiler for responsiv design -->
+  </head>
+  <body>
+    <!-- Hovedinnhold -->
+    <main>
+      <h1 class="hidden">Nyhetsbrev Registreringsskjema</h1> <!-- Skjult tittel for skjermlesere -->
+
+      <!-- Start på registreringsskjema -->
+      <div class="card sign-up-card">
+        <img
+          class="sign-up-img"
+          src="assets/images/illustration-sign-up-mobile.svg"
+          alt="Illustrasjon for mobilregistrering"
+        />
+        <div class="sign-up-text">
+          <h2>Hold deg oppdatert!</h2>
+
+          <p>Bli med over 60,000 produktledere som mottar månedlige oppdateringer om:</p>
+          <ul class="sign-up-list">
+            <li>Produktoppdagelse og bygging av det som betyr noe</li>
+            <li>Målinger for å sikre at oppdateringer blir en suksess</li>
+            <li>Og mye mer!</li>
+          </ul>
+
+          <form class="sign-up-form">
+            <label for="email">E-postadresse</label>
+            <input id="email" type="email" placeholder="email@firma.no" /> <!-- Inndata for e-post -->
+            <span class="error-message">Gyldig e-post kreves</span> <!-- Feilmelding ved ugyldig e-post -->
+            <button class="btn submit-btn">
+              Meld deg på månedlig nyhetsbrev
+            </button> <!-- Send-knapp -->
+          </form>
+        </div>
+      </div>
+      <!-- Slutt på registreringsskjema -->
+
+      <!-- Start på suksessmelding -->
+      <div class="card success-card hidden">
+        <img src="assets/images/icon-success.svg" alt="Suksessikon" />
+        <h2>Takk for at du meldte deg på!</h2>
+        <p>
+          En bekreftelsesmail har blitt sendt til
+          <span class="submitted-email">ash@loremcompany.com</span>. Åpne den og
+          klikk på knappen for å bekrefte din registrering.
+        </p>
+        <button class="btn dismiss-btn">Lukk melding</button>
+      </div>
+      <!-- Slutt på suksessmelding -->
+    </main>
+
+    <!-- Bunntekst -->
+    <footer class="flex-center">
+      <span class="attribution">
+        Utfordring av
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >
+      </span>
+      <span class="boxv">&boxv;</span>
+      <span class="attribution">
+        Kodet av
+        <a
+          href="https://github.com/ArvidKodehode"
+          target="_blank"
+          >Arvid</a
+        >
+      </span>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

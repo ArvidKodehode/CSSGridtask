@@ -1,0 +1,98 @@
+/* CSS Media Queries for ulike skjermstørrelser */
+
+/**********************/
+/*     over 480px     */
+/**********************/
+@media only screen and (min-width: 30em) {
+  .card {
+    border-radius: 0 0 3rem 3rem; /* Runde hjørner nederst */
+    min-height: fit-content; /* Tilpasser høyden til innholdet */
+  }
+}
+
+/**********************/
+/*     over 640px     */
+/**********************/
+@media only screen and (min-width: 43em) {
+  /* Ingen spesifikke regler her */
+}
+
+/**********************/
+/*     over 928px     */
+/**********************/
+@media only screen and (min-width: 58em) {
+  /* Ingen spesifikke regler her */
+}
+
+/***********************/
+/*     over 1120px     */
+/***********************/
+@media only screen and (min-width: 70em) {
+  /* Hovedinnhold */
+  main {
+    min-height: calc(100vh - 5rem); /* Tar hensyn til bunntekst */
+
+    display: grid; /* Bruker CSS Grid for sentrering */
+    place-content: center; /* Sentrerer innhold horisontalt og vertikalt */
+  }
+
+  .card {
+    border-radius: 3rem; /* Runde hjørner på hele kortet */
+  }
+
+  h2 {
+    font-size: 5.6rem; /* Større overskrift for desktop */
+  }
+
+  /* Kort for å melde seg på */
+  .sign-up-card {
+    max-width: 100rem; /* Maksimal bredde for kortet */
+    padding: 3rem; /* Polstring rundt innholdet */
+
+    display: grid; /* Bruker grid-layout for kortinnhold */
+    grid-template-columns: 4fr 3fr; /* To kolonner med ulik bredde */
+  }
+
+  .sign-up-img {
+    grid-column: -1 / -2; /* Plasserer bildet til høyre */
+    content: url(../images/illustration-sign-up-desktop.svg); /* Endrer bilde for desktop */
+  }
+
+  .sign-up-text {
+    grid-row: 1; /* Holder teksten på samme rad */
+    padding: 0 6.5rem; /* Polstring rundt teksten */
+
+    justify-content: center; /* Sentrerer innhold horisontalt */
+    gap: 2.5rem; /* Mellomrom mellom elementene */
+  }
+
+  /* Suksesskort */
+  .success-card {
+    max-width: 55rem; /* Maksimal bredde for kortet */
+    padding: 7rem 9rem; /* Polstring rundt innholdet */
+
+    gap: 4rem; /* Mellomrom mellom elementene */
+  }
+}
+
+/**********************/
+/* Veldig små skjermer */
+/*     under 368px    */
+/**********************/
+@media (max-width: 23em) {
+  /* Ingen spesifikke regler her */
+}
+
+/**********************/
+/* Bunntekst media query */
+/**********************/
+@media (max-width: 23em) {
+  footer {
+    flex-direction: column; /* Endrer layout til kolonne */
+    gap: 0.5rem; /* Mellomrom mellom elementene */
+  }
+
+  .boxv {
+    display: none; /* Skjuler elementet for små skjermer */
+  }
+}
